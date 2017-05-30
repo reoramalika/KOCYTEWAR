@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Menu/Main/option_menu.unity
+=======
+- path: Assets/Scenes/Gameplay/Gameplay.unity
+>>>>>>> master
   isLoaded: 1
   isActive: 1
