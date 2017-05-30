@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KOCYTEWAR_MENU", "Assembly-CSharp.csproj", "{F744BCAF-8284-94C0-6417-C6CAF44F4BCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F744BCAF-8284-94C0-6417-C6CAF44F4BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F744BCAF-8284-94C0-6417-C6CAF44F4BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F744BCAF-8284-94C0-6417-C6CAF44F4BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F744BCAF-8284-94C0-6417-C6CAF44F4BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
