@@ -60,3 +60,6 @@ E:\KAMPUS\SEMESTER 6\4-PMG(Pak Jes+Gameloft-Lab.Jarkom-3)\TUBES-PMG\KOCYTEWAR_ME
 E:\KAMPUS\SEMESTER 6\4-PMG(Pak Jes+Gameloft-Lab.Jarkom-3)\TUBES-PMG\KOCYTEWAR_MENU\TUGAS_BESAR\Temp\bin\Debug\UnityEngine.Analytics.xml
 E:\KAMPUS\SEMESTER 6\4-PMG(Pak Jes+Gameloft-Lab.Jarkom-3)\TUBES-PMG\KOCYTEWAR_MENU\TUGAS_BESAR\Temp\bin\Debug\UnityEngine.HoloLens.xml
 E:\KAMPUS\SEMESTER 6\4-PMG(Pak Jes+Gameloft-Lab.Jarkom-3)\TUBES-PMG\KOCYTEWAR_MENU\TUGAS_BESAR\Temp\bin\Debug\UnityEngine.VR.xml
+E:\KAMPUS\SEMESTER 6\4-PMG(Pak Jes+Gameloft-Lab.Jarkom-3)\NEW TUGAS\KOCYTEWAR\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+E:\KAMPUS\SEMESTER 6\4-PMG(Pak Jes+Gameloft-Lab.Jarkom-3)\NEW TUGAS\KOCYTEWAR\obj\Debug\Assembly-CSharp.dll
+E:\KAMPUS\SEMESTER 6\4-PMG(Pak Jes+Gameloft-Lab.Jarkom-3)\NEW TUGAS\KOCYTEWAR\obj\Debug\Assembly-CSharp.pdb

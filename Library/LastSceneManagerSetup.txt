@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Menu/Help/howtoplay_menu.unity
+- path: Assets/Scenes/Menu/Main/option_menu.unity
   isLoaded: 1
   isActive: 1
