@@ -12,10 +12,18 @@ public class gameBrain : MonoBehaviour {
 
     private List<GameObject> enemies;
     private List<float> enemySpeed;
+    Material m;
+
+    public SpriteRenderer bodyArea;
+    private Material spriteDefault,temp;
 
     // Use this for initialization
     void Start ()
     {
+        spriteDefault = bodyArea.material;
+        bodyArea.material = new Material(Shader.Find("Diffuse"));
+        temp = bodyArea.material;
+
         enemies = new List<GameObject>();
         enemySpeed = new List<float>();
         Debug.Log("inserting enemies");
@@ -45,8 +53,14 @@ public class gameBrain : MonoBehaviour {
         Debug.Log("speed" + enemy.moveSpeed);
 
         go =Instantiate(enemies[index]);
-        go.transform.position = new Vector2(Random.Range(2.5f, -2.5f),3);
+        go.transform.position = new Vector2(Random.Range(6.6f, -6.6f),3);
         stat=false;
+    }
+
+    public void onDamage()
+    {
+        bodyArea.material = new Material( spriteDefault);
+        //bodyArea.material.Lerp(temp, new Material(spriteDefault), Mathf.PingPong(Time.time,2.0f)/2.0f);
     }
 
     public void addScore(int value)

@@ -26,13 +26,14 @@ public class enemy : MonoBehaviour {
     {
         if (collision.tag == "Player" || collision.tag == "body")
         {
+            getGameBrain();
             if (collision.tag == "Player")
             {
                 //e.enabled = true;
                 Debug.Log("Touched");
-                getGameBrain();
                 g.addScore(10);
             }
+            g.onDamage();
             Destroy(gameObject);
         }
     }
