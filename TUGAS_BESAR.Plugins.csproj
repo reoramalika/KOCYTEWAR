@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D4034947-1214-E5A6-AA49-95F4A131616E}</ProjectGuid>
+    <ProjectGuid>{C9C98FBD-0821-EEBF-B832-99E4BFC0DBC6}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>GamePlugins:3</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>5.6.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -78,18 +78,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="TUGAS_BESAR.Plugins.csproj">
-      <Project>{C9C98FBD-0821-EEBF-B832-99E4BFC0DBC6}</Project>
-      <Name>TUGAS_BESAR.Plugins</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Scripts\Gameplay\bodyColor.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\enemy.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\gameBrain.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\player.cs" />
-    <Compile Include="Assets\Scripts\Menu\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\Menu\UIManagerScript.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Example\MNFeaturePreview.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Example\MNUseExample.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Core\MNP.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Core\MNP_Config.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Core\MNP_PlatformSettings.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Core\MNPopup.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Core\MobileNativeDialog.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Core\MobileNativeMessage.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Core\MobileNativeRateUs.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Enum\MNAndroidDialogTheme.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Enum\MNDialogResult.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Platfroms\AndroidImpl\PopUps\Base\MNAndroidNative.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Platfroms\AndroidImpl\PopUps\Base\MNProxyPool.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Platfroms\AndroidImpl\PopUps\MNAndroidDialog.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Platfroms\AndroidImpl\PopUps\MNAndroidMessage.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Platfroms\AndroidImpl\PopUps\MNAndroidRateUsPopUp.cs" />
+    <Compile Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Scripts\Utils\MNP_Files.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\StansAssets\Modules\MobileNativePopUps\Documentation\ReadMe.txt" />

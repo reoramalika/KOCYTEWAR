@@ -17,7 +17,8 @@ public class player : MonoBehaviour {
 		if (Input.GetMouseButton(0)) {
 			mousePosition = Input.mousePosition;
 			mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-			transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+            mousePosition.y = transform.position.y-0.2f;
+            transform.position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
 		}
     }
 

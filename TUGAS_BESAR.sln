@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUGAS_BESAR.Plugins", "TUGAS_BESAR.Plugins.csproj", "{C9C98FBD-0821-EEBF-B832-99E4BFC0DBC6}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUGAS_BESAR", "TUGAS_BESAR.csproj", "{D4034947-1214-E5A6-AA49-95F4A131616E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUGAS_BESAR.Editor.Plugins", "TUGAS_BESAR.Editor.Plugins.csproj", "{2ECA6E97-9056-5345-8271-4DE971DF8B98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9C98FBD-0821-EEBF-B832-99E4BFC0DBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C98FBD-0821-EEBF-B832-99E4BFC0DBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C98FBD-0821-EEBF-B832-99E4BFC0DBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C98FBD-0821-EEBF-B832-99E4BFC0DBC6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4034947-1214-E5A6-AA49-95F4A131616E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4034947-1214-E5A6-AA49-95F4A131616E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4034947-1214-E5A6-AA49-95F4A131616E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4034947-1214-E5A6-AA49-95F4A131616E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ECA6E97-9056-5345-8271-4DE971DF8B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECA6E97-9056-5345-8271-4DE971DF8B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECA6E97-9056-5345-8271-4DE971DF8B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECA6E97-9056-5345-8271-4DE971DF8B98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
