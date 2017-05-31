@@ -33,7 +33,7 @@ public class enemy : MonoBehaviour {
                 Debug.Log("Touched");
                 g.addScore(10);
             }
-            g.onDamage();
+            //g.onDamage();
             Destroy(gameObject);
         }
     }
