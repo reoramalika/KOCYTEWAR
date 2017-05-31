@@ -14,12 +14,14 @@ public class gameBrain : MonoBehaviour {
     private List<float> enemySpeed;
     Material m;
 
-    /*public SpriteRenderer bodyArea;
-    private Material spriteDefault,temp;*/
+    public SpriteRenderer bodyAreaView;
+    bool gameOver;
+    //private Material spriteDefault,temp;
 
     // Use this for initialization
     void Start ()
     {
+        gameOver = false;
         /*spriteDefault = bodyArea.material;
         bodyArea.material = new Material(Shader.Find("Diffuse"));
         temp = bodyArea.material;*/
@@ -37,8 +39,10 @@ public class gameBrain : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        if (!stat)
+	void Update ()
+    {
+        Debug.Log("gameover: " + gameOver);
+        if ((!stat)&&(!gameOver))
         {
             stat = true;
             StartCoroutine(spawnEnemy(Random.Range(0,enemies.Count),1f));
@@ -59,8 +63,9 @@ public class gameBrain : MonoBehaviour {
 
     public void onDamage()
     {
-        //bodyArea.material = new Material( spriteDefault);
-        //bodyArea.material.Lerp(temp, new Material(spriteDefault), Mathf.PingPong(Time.time,2.0f)/2.0f);
+        bodyAreaView.color = Color.Lerp(bodyAreaView.color, Color.red, Time.deltaTime+0.2f);
+        if (bodyAreaView.color == Color.red)
+            gameOver = true;
     }
 
     public void addScore(int value)
