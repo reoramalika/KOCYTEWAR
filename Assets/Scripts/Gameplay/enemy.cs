@@ -33,7 +33,12 @@ public class enemy : MonoBehaviour {
                 Debug.Log("Touched");
                 g.addScore(10);
             }
-            g.onDamage();
+            else if (collision.tag == "body")
+            {
+                Debug.Log("Damaged");
+                g.onDamage();
+            }
+            
             Destroy(gameObject);
         }
     }
