@@ -7,7 +7,7 @@ public class gameBrain : MonoBehaviour {
     public float routinTime;
     private bool stat;
     enemy enemy;
-    imune imune;
+  //  imune imune;
     private int score = 0;
     public GUIText textScore;
     public GUIText textGameOver;
@@ -21,11 +21,16 @@ public class gameBrain : MonoBehaviour {
 
     private int maxEnemy;
     public int currentTime,imuneOverTime;
+
+	public Canvas canvas;
     //private Material spriteDefault,temp;
 
     // Use this for initialization
     void Start ()
     {
+		//canvas.enabled = false;
+		//canvas.isActiveAndEnabled = false;
+
         gameOver = false;
         currentTime = 0;
         routinTime=2f;
