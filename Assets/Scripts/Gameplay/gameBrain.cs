@@ -3,25 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class gameBrain : MonoBehaviour {
-    GameObject prefab, go;
-    public float routinTime,currentTime;
+    GameObject imuneObjek, go;
+    public float routinTime;
     private bool stat;
     enemy enemy;
+    imune imune;
     private int score = 0;
     public GUIText textScore;
+    public GUIText textGameOver;
 
     private List<GameObject> enemies;
     private List<float> enemySpeed;
     Material m;
 
     public SpriteRenderer bodyAreaView;
-    bool gameOver;
+    public bool levelUp=false, imuneStat=false,isActiveImune=false;
+
+    private int maxEnemy;
+    public int currentTime,imuneOverTime;
     //private Material spriteDefault,temp;
 
     // Use this for initialization
     void Start ()
     {
         gameOver = false;
+        currentTime = 0;
+        routinTime=2f;
+        maxEnemy=1;
         /*spriteDefault = bodyArea.material;
         bodyArea.material = new Material(Shader.Find("Diffuse"));
         temp = bodyArea.material;*/
@@ -29,11 +37,11 @@ public class gameBrain : MonoBehaviour {
         enemies = new List<GameObject>();
         enemySpeed = new List<float>();
         Debug.Log("inserting enemies");
-        enemies.Add(Resources.Load("High Bactery") as GameObject);
-        enemySpeed.Add(0.1f);
-        enemies.Add(Resources.Load("Middle Bactery") as GameObject);
-        enemySpeed.Add(0.1f);
         enemies.Add(Resources.Load("Low Bactery") as GameObject);
+        enemySpeed.Add(0.05f);
+        enemies.Add(Resources.Load("Middle Bactery") as GameObject);    
+        enemySpeed.Add(0.075f);
+        enemies.Add(Resources.Load("High Bactery") as GameObject);
         enemySpeed.Add(0.1f);
         Debug.Log(enemies.Count+" enemies inserted");
     }
@@ -41,11 +49,30 @@ public class gameBrain : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        currentTime = (int) Time.time;
         Debug.Log("gameover: " + gameOver);
-        if ((!stat)&&(!gameOver))
+        if (!gameOver)
         {
-            stat = true;
-            StartCoroutine(spawnEnemy(Random.Range(0,enemies.Count),1f));
+            if ((currentTime + 1) % 10 == 0)
+                levelUp = true;
+
+            if (currentTime % 10 == 0 && levelUp)
+            {
+                if(maxEnemy<enemies.Count)
+                    maxEnemy++;
+                else
+                {
+                    routinTime = routinTime - 0.2f;
+                }
+                levelUp = false;
+                Debug.Log("Levelup");
+            }
+
+            if(!stat)
+            {
+                stat = true;
+                StartCoroutine(spawnEnemy(Random.Range(0, maxEnemy), routinTime));
+            }
         }
     }
 
@@ -61,17 +88,43 @@ public class gameBrain : MonoBehaviour {
         stat=false;
     }
 
+    public int count=0;
+    private bool gameOver;
+
+    public bool GameOver
+    {
+        get
+        {
+            return gameOver;
+        }
+
+        set
+        {
+            gameOver = value;
+        }
+    }
+
     public void onDamage()
     {
-        bodyAreaView.color = Color.Lerp(bodyAreaView.color, Color.red, Time.deltaTime+0.2f);
-        if (bodyAreaView.color == Color.red)
+        if (!isActiveImune)
+        {
+            bodyAreaView.color = Color.Lerp(bodyAreaView.color, Color.red, Time.deltaTime + 0.2f);
+            count++;
+        }
+        if (count>=10)
+        {
             gameOver = true;
+            textGameOver.text = "GAME OVER";
+        }
     }
 
     public void addScore(int value)
     {
-        score += value;
-        updateScore();
+        if(!gameOver)
+        {
+            score += value;
+            updateScore();
+        }
     }
 
     private void updateScore()

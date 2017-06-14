@@ -87,6 +87,8 @@
     <Compile Include="Assets\Scripts\Gameplay\bodyColor.cs" />
     <Compile Include="Assets\Scripts\Gameplay\enemy.cs" />
     <Compile Include="Assets\Scripts\Gameplay\gameBrain.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\heal.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\imune.cs" />
     <Compile Include="Assets\Scripts\Gameplay\player.cs" />
     <Compile Include="Assets\Scripts\Menu\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\Menu\UIManagerScript.cs" />
